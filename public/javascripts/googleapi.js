@@ -323,20 +323,20 @@ var showthirdcountry = document.getElementById("thirdcountryinfo")
  * @return {[Boolean]}       [returns a boolean value for the check.]
  */
 function check(entry, list) {
-  var value = 0;
-  for (i=0; i>list.length;i++){
-    if (entry === list[i]){
-      return false;
+  var repeated = 0
+  for (i=0; i<list.length;i++){
+    if (entry == list[i]){
+      repeated += 1;
     }
   }
-return true;
+  return repeated
 }
 
 document.getElementById("save1").addEventListener("click", function(){
   var entry = document.getElementById("title1").innerHTML;
   var test = check(entry, favouritesList);
-  if (test === false) {
-    console.log('Location already in list!');
+  if (test > 0) {
+    alert('Location already in list!');
   }
   else {
       favouritesList.push(entry);
@@ -346,8 +346,8 @@ document.getElementById("save1").addEventListener("click", function(){
 document.getElementById("save2").addEventListener("click", function(){
   var entry = document.getElementById("title2").innerHTML;
   var test = check(entry, favouritesList);
-  if (test === false) {
-    console.log('Location already in list!');
+  if (test > 0) {
+    alert('Location already in list!');
   }
   else {
       favouritesList.push(entry);
@@ -357,8 +357,8 @@ document.getElementById("save2").addEventListener("click", function(){
 document.getElementById("save3").addEventListener("click", function(){
   var entry = document.getElementById("title3").innerHTML;
   var test = check(entry, favouritesList);
-  if (test === false) {
-    console.log('Location already in list!');
+  if (test > 0) {
+    alert('Location already in list!');
   }
   else {
       favouritesList.push(entry);
