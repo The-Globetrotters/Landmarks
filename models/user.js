@@ -31,13 +31,31 @@ var UserSchema = mongoose.Schema({
 
 });
 
+/*var FavSchema = mongoose.Schema({
+	username: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'UserSchema',
+		index: true
+	}],
 
+	landmarks: {
+		type: String
+	}
+
+});
+
+
+
+var FavLandmarks = module.exports = mongoose.model('FavLandmarks', FavSchema);*/
 var User = module.exports = mongoose.model('User', UserSchema);
 
 
 module.exports.getUserById = function(id, callback){
 	User.findById(id, callback);
+	/*FavLandmarks.findById(id, callback);*/
 }
+
+
 module.exports.getUserByUsername = function(username, callback){
 	var query = {username: username};
 	User.findOne(query, callback);

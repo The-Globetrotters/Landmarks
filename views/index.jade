@@ -1,6 +1,7 @@
 extends layout
 
 block content
+
   h1#pagetitle Country Landmarks
     body(style = 'background-image: url(http://www.leger.co.uk/blog/wp-content/uploads/2016/02/eiffel-tower-1576.jpg);background-size: cover')
       .countryselect
@@ -30,3 +31,5 @@ block content
         #displaysaved
       script(src='/javascripts/googleapi.js')
       script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8&callback=initMap')
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+

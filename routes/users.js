@@ -22,6 +22,7 @@ router.get('/login', function(req, res, next) {
 router.post('/login',
   passport.authenticate('local',{failureRedirect:'/users/login', failureFlash: 'Invalid username or password'}),
   function(req, res) {
+  
  	req.flash('success','You are now logged in');
  	res.redirect('/');
   });
@@ -37,7 +38,9 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-
+$(function(){  
+  $('#error').fadeIn('slow');
+});
 
 passport.use(new LocalStrategy(function(username, password, done){
 	User.getUserByUsername(username,function(err,user){
