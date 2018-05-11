@@ -44,11 +44,10 @@ var UserSchema = mongoose.Schema({
 
 });
 
-
-
 var FavLandmarks = module.exports = mongoose.model('FavLandmarks', FavSchema);*/
-var User = module.exports = mongoose.model('User', UserSchema);
 
+var User = module.exports = mongoose.model('User', UserSchema);
+var FavLandmarks = module.exports = mongoose.model('FavLandmarks', FavSchema);
 
 module.exports.getUserById = function(id, callback){
 	User.findById(id, callback);
