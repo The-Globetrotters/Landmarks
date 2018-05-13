@@ -2,7 +2,17 @@
 
 /*-------------------------JSON OF COUNTRIES AND PLACES---------------------------------------------------*/
 
+
 var favouritesList = [];
+
+
+/*const username = require("/index.js");
+let valname = username.sendUname(); // val is "Hello"   
+
+console.log(valname);
+
+*/
+
 
 var Countries= {Canada: {center: {
                             coor: {lat: 51.4968, lng: -100.9281}
@@ -362,6 +372,10 @@ document.getElementById("save3").addEventListener("click", function(){
   }
   else {
       favouritesList.push(entry);
+      var data = {
+        landname: entry
+      };
+      $.post('/saveland', data);
   }
 });
 

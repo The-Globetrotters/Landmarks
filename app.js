@@ -49,14 +49,12 @@ app.use(session({
 	resave: true
 }));
 
-
 // passsport 
 app.use(passport.initialize());
 app.use(passport.session());
 
 
 //validator
-
 app.use(expressValidator({
 	errorFormatter: function(param,msg, value){
 		var namespace = param.split('.')
@@ -74,18 +72,19 @@ app.use(expressValidator({
 	}
 }));
 
-
 app.use(require('connect-flash')());
 app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
   next();
 });
 
-
-
 app.get('*',function(req,res,next){
 	res.locals.user = req.user || null;
 	next();
+})
+
+app.get('/javascripts/googleapi.js', function(req,res,next){
+	res.locals
 })
 
 app.use('/', routes);
@@ -103,6 +102,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
+  console.log(err);
   res.status(err.status || 500);
   res.render('error');
 });
