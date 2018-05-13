@@ -2,18 +2,11 @@ extends layout
 
 block content
 
-  h1#pagetitle Country Landmarks
-    body(style = 'background-image: url(http://www.leger.co.uk/blog/wp-content/uploads/2016/02/eiffel-tower-1576.jpg);background-size: cover')
-      .countryselect
-        button.dropdown Select Country
-        .countries
-          a#Canada Canada
-          a#USA United States of America
-          a#Russia Russia
-          a#China China
-          a#Japan Japan
-          a#Mexico Mexico
-      #map
+  body(style = 'background-image: url(http://www.leger.co.uk/blog/wp-content/uploads/2016/02/eiffel-tower-1576.jpg);background-size: cover')
+    .countryselect
+      input#countrysearch(type='text', placeholder='Enter a country or city')
+      button#searchbutton Search
+    #map
       #firstcountry
       #secondcountry
       #thirdcountry
@@ -32,4 +25,3 @@ block content
       script(src='/javascripts/googleapi.js')
       script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8&callback=initMap')
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
-

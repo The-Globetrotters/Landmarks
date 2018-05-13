@@ -138,16 +138,34 @@ body{
     margin:30px;
 }
 
+/*country search input*/
+#countrysearch {
+  width:12vw;
+  height:30px;
+  top:15%;
+}
+
+#searchbutton {
+  height:30px;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.4s;
+}
+
+#searchbutton:hover {
+  color:rgb(51,153,255);
+}
+
 /*select country div*/
 .countryselect {
   position: absolute;
   display:inline-block;
-    left:4.5%;
+    left:2.5%;
     top:15%;
 }
 
 /*dropdown button*/
-.dropdown {
+/*.dropdown {
   background-color: grey;
   color: white;
   padding: 16px;
@@ -176,16 +194,16 @@ body{
 
 .countries a:hover {
     background-color: grey;
-}
+}*/
 
 /*show downdown on hover*/
-.countryselect:hover .countries {
+/*.countryselect:hover .countries {
     display:block;
 }
 
 .countryselect:hover .dropdown {
   background-color: grey;
-}
+}*/
 
 /*the map*/
 
