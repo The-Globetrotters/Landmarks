@@ -38,9 +38,6 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
-$(function(){  
-  $('#error').fadeIn('slow');
-});
 
 passport.use(new LocalStrategy(function(username, password, done){
 	User.getUserByUsername(username,function(err,user){
