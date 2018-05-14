@@ -23,7 +23,7 @@ router.post('/login',
   passport.authenticate('local',{failureRedirect:'/users/login', failureFlash: 'Invalid username or password'}),
   function(req, res) {
   
- 	req.flash('success','You are now logged in');
+ 	req.flash('success','You are now logged in', req.body.username);
  	res.redirect('/');
   });
 
@@ -69,14 +69,6 @@ router.post('/register', upload.single('profileimage') , function(req, res, next
 
 	console.log(req.file);
 
-/*	if(req.file){
-		console.log('Uploading File..');
-		var profileimage = req.file.filename;
-	}else{
-		console.log('No file uploaded..');
-		var profileimage = 'noimage.jpg';
-	}
-*/
 	//form validator 
 	req.checkBody('name','Name field is required').notEmpty();
 	req.checkBody('email','Email field is required').notEmpty();
@@ -100,6 +92,7 @@ router.post('/register', upload.single('profileimage') , function(req, res, next
 			email: email,
 			username: username,
 			password: password,
+			favlands: []
 			//profileimage: profileimage
 		});
 
