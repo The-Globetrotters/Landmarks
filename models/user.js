@@ -1,9 +1,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-
 mongoose.connect('mongodb://localhost/nodeauth');
-
 var db = mongoose.connection;
 
 //user schema 
@@ -27,33 +25,25 @@ var UserSchema = mongoose.Schema({
 
 	profileimage: {
 		type: String 
-	}
+	},
+
+	favlands: [{type: String}]
 
 });
 
-/*var FavSchema = mongoose.Schema({
-	username: [{
-		type: mongoose.Schema.Types.ObjectId,
-		ref: 'UserSchema',
-		index: true
-	}],
-
-	landmarks: {
-		type: String
-	}
-
-});
-
-var FavLandmarks = module.exports = mongoose.model('FavLandmarks', FavSchema);*/
 
 var User = module.exports = mongoose.model('User', UserSchema);
-var FavLandmarks = module.exports = mongoose.model('FavLandmarks', FavSchema);
+
+module.exports.appendFav = function(regUser, landname, callback){
+	console.log('appending fav', regUser, landname);
+	regUser.favlands.addToSet(landname);
+	regUser.save(callback)
+	console.log('done appending fav', regUser, landname);
+}
 
 module.exports.getUserById = function(id, callback){
 	User.findById(id, callback);
-	/*FavLandmarks.findById(id, callback);*/
 }
-
 
 module.exports.getUserByUsername = function(username, callback){
 	var query = {username: username};
@@ -66,7 +56,6 @@ module.exports.comparePassword = function(candidatePassword, hash, callback){
     	callback(null, isMatch);
 	});
 }
-
 
 module.exports.createUser = function(newUser, callback){
 	bcrypt.genSalt(10, function(err, salt) {
