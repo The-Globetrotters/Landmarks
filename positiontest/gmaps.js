@@ -1,12 +1,12 @@
 const request = require('request');
 
-var getLandmarks = (address, callback) => {
+module.exports.getLandmarks = (address, callback) => {
 
     request({
         //https://maps.googleapis.com/maps/api/place/textsearch/json?query=point+of+interest+in+canada&key=AIzaSyA5XukOn9Ji2Bl-BEFw9l-UJl2D4TaLDhM
         //url: 'http://maps.googleapis.com/maps/api/geocode/json?address=folwark%20leszcyznowka',
         url: 'https://maps.googleapis.com/maps/api/place/textsearch/json' +
-            '?query=point+of+interest+in+' + encodeURIComponent(address) + '&key=AIzaSyA5XukOn9Ji2Bl-BEFw9l-UJl2D4TaLDhM',
+            '?query=point+of+interest+in+Canada&key=AIzaSyA5XukOn9Ji2Bl-BEFw9l-UJl2D4TaLDhM',
         json: true
     }, (error, response, body) => {
         if (error) {
@@ -24,16 +24,14 @@ var getLandmarks = (address, callback) => {
                     photo: body.results[i].photos
                 })
             }
-            callback(undefined, {
-                landmarks: landmarks
-            })
+            locations =[]
+            for (i<0;i < landmarks.length;i++){
+                locations.push({lat:landmarks[i].latitude,lng:landmarks[i].longitude})
+            }
         };
         //console.log(`Your requested venue: ${address}`);
         //console.log(`Address: ${body.results[0].formatted_address}`);
         //console.log(`Type: ${body.results[0].types[0]}`);
     })
-};
-
-module.exports = {
-    getLandmarks
+    return locations
 };
