@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "jshint hello.js"
   },
   "dependencies": {
     "bcrypt": "^2.0.1",
@@ -40,4 +41,7 @@
     "url": "https://github.com/yuyulai22/Landmarks/issues"
   },
   "homepage": "https://github.com/yuyulai22/Landmarks#readme"
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  }
 }

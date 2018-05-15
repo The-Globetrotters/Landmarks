@@ -12,9 +12,10 @@
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script>
+      const gmaps = require('/gmaps');
       function initMap() {
         var marker =""
-        var locations = [{lat: 51.4968, lng: -115.9281},{lat: 43.6426, lng: -79.3871},{lat: 49.3017, lng: -123.1417},{lat: 40.7829, lng: -73.9654},{lat: 37.8199, lng: -122.4783},{lat: 40.6892, lng: -74.0445},{lat: 55.7520, lng: 37.6175},{lat: 55.7539, lng: 37.6208}, {lat:59.9398, lng: 30.3146}];
+        var locations = gmaps.getLandmarks();
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: {lat: 51.4968, lng: -115.9281}
@@ -24,8 +25,8 @@
   marker = new google.maps.Marker({
     position: locations[i],
     map: map
-  });
-}
+    })
+  }
 }
     </script>
     <script async defer
