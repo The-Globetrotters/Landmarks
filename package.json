@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "jshint hello.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^2.0.1",
@@ -13,12 +12,12 @@
     "connect-flash": "*",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "express": "^4.16.3",
+    "express": "~4.16.0",
     "express-messages": "*",
     "express-session": "^1.15.6",
     "express-validator": "*",
     "jade": "~1.11.0",
-    "mongodb": "^3.0.8",
+    "mongodb": "*",
     "mongoose": "*",
     "morgan": "~1.9.0",
     "multer": "*",
@@ -26,22 +25,5 @@
     "passport-http": "*",
     "passport-local": "*",
     "serve-favicon": "*"
-  },
-  "description": "2520 web dev project",
-  "main": "GoogleAPItest.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuyulai22/Landmarks.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yuyulai22/Landmarks/issues"
-  },
-  "homepage": "https://github.com/yuyulai22/Landmarks#readme"
-  "devDependencies": {
-    "jshint": "^2.9.5"
   }
 }
