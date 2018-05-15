@@ -32,7 +32,19 @@ app.set('view engine', 'jade');
 
 //handle file uploads
 
+const MongoClient = require('mongodb').MongoClient;
 
+// replace the uri string with your connection string.
+const uri = "mongodb://mongodb-stitch-landmarks-koccm:1234@clustercool-shard-00-00-2nkfw.mongodb.net:27017,clustercool-shard-00-01-2nkfw.mongodb.net:27017,clustercool-shard-00-02-2nkfw.mongodb.net:27017/test?ssl=true&replicaSet=ClusterCool-shard-0&authSource=admin&retryWrites=true"
+MongoClient.connect(uri, function(err, client) {
+   if(err) {
+        console.log('Error occurred while connecting to MongoDB Atlas...\n',err);
+   }
+   console.log('Connected...');
+   const collection = client.db("test").collection("devices");
+   // perform actions on the collection object
+   client.close();
+});
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
