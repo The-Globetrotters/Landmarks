@@ -17,7 +17,7 @@
     "express-session": "^1.15.6",
     "express-validator": "*",
     "jade": "~1.11.0",
-    "mongodb": "*",
+    "mongodb": "^3.0.8",
     "mongoose": "*",
     "morgan": "~1.9.0",
     "multer": "*",
@@ -25,5 +25,19 @@
     "passport-http": "*",
     "passport-local": "*",
     "serve-favicon": "*"
-  }
+  },
+  "description": "2520 web dev project",
+  "main": "GoogleAPItest.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuyulai22/Landmarks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuyulai22/Landmarks/issues"
+  },
+  "homepage": "https://github.com/yuyulai22/Landmarks#readme"
 }

@@ -1,15 +1,21 @@
 extends layout
 
 block content
-    h2.page-header Login
-    p Please login below
+    div#logpage
+        h2.page-header Login
+        p Please login below
 
-    form(method='post', action='/users/login')
-        .form-group
-        label Username 
-        input.form-control(name='username', type='text',placeholder='Enter User name')
-        .form-group
-        label Password
-        input.form-control(name='password', type='password',placeholder='Enter password')
-
-        input.btn.btn-primary(type='submit',name='submit',value='Login')
+        form(method='post', action='/users/login')
+            .form-group
+            label Username 
+            input.form-control(name='username', type='text',placeholder='Enter User name')
+            .form-group
+            label Password
+            input.form-control(name='password', type='password',placeholder='Enter password')
+            p
+            input.btn.btn-primary(type='submit',name='submit',value='Login')
+    .main-text.hidden-xs
+        .col-md-12.text-left
+            h1(style="font-family: 'Lato';") Country Landmarks
+            p(style="font-family: 'Lato';")
+            | It wasn’t until recently that we actually realized just how much we love carrot cake.
