@@ -6,22 +6,15 @@ block content
     .countryselect
       input#countrysearch(type='text', placeholder='Enter a country or city')
       button#searchbutton Search
+      button#savedshow Show landmarks
     #map
-      #firstcountry
-      #secondcountry
-      #thirdcountry
-      #firstcountryinfo.countryinfo
+    #countrypic
+      #countryinfo
         h2#title1.infotitle
         button#save1.save Save
-      #secondcountryinfo.countryinfo
-        h2#title2.infotitle
-        button#save2.save Save
-      #thirdcountryinfo.countryinfo
-        h2#title3.infotitle
-        button#save3.save Save
       #savedplaces
-        button#savedshow Show landmarks
         #displaysaved
+        button#savedclose Close
       script(src='/javascripts/googleapi.js')
       script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8&callback=initMap')
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')

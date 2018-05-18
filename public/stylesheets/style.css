@@ -30,10 +30,10 @@ form{
 
 
 .astext {
-    background:none;
-    border:none;
-    margin:0;
-    padding:0;
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
 }
 
 
@@ -86,17 +86,16 @@ font-size: 80px;
 
 
 .main-container{
-    width: 450px;
-    height: 200px;
+  width: 450px;
+  height: 200px;
 }
 .main-wrapper{
-    margin: auto;
-    background-color: #ccc;
-
+  margin: auto;
+  background-color: #ccc;
 }
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #logpage{
@@ -141,36 +140,44 @@ body{
 
 /*title*/
 #title {
-    position: absolute;
-    top:-4px;
-    left:35%;
-    font-family:sans-serif;
+  position: absolute;
+  top:-4px;
+  left:35%;
+  font-family:sans-serif;
 }
 
 #logoutbutton {
-    position:absolute;
-    padding:5px;
-    top:2%;
-    right:2%;
-    width:100px;
-    height:50px;
-    text-align:center;
-    font-family: "Helvetica", Arial, sans-serif;
-    font-size:100%;
-    color:white;
-    background-color:rgba(60,60,60,0.6);
+  position:absolute;
+  padding:5px;
+  top:2%;
+  right:2%;
+  width:100px;
+  height:50px;
+  text-align:center;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size:100%;
+  color:white;
+  background-color:rgba(60,60,60,0.6);
 }
 
 #pagetitle {
-    font-family: "Helvetica", Arial, sans-serif;
-    font-size:350%;
-    color:white;
-    margin:30px;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-size:350%;
+  color:white;
+  margin:30px;
+}
+
+/*select country div*/
+.countryselect {
+  position: absolute;
+  display:inline-block;
+  left:4.5%;
+  top:10%;
 }
 
 /*country search input*/
 #countrysearch {
-  width:12vw;
+  width:41vw;
   height:30px;
   top:15%;
 }
@@ -179,69 +186,34 @@ body{
   height:30px;
   border-radius: 2px;
   background-color:white;
-  transition-duration: 0.4s;
+  transition-duration: 0.2s;
 }
 
 #searchbutton:hover {
   color:rgb(51,153,255);
 }
 
-/*select country div*/
-.countryselect {
-  position: absolute;
-  display:inline-block;
-    left:2.5%;
-    top:15%;
-}
-
-/*dropdown button*/
-/*.dropdown {
-  background-color: grey;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  color:white;
-  background-color:rgba(60,60,60,0.6);
-}
-
-.countries {
-  display: none;
+#savedshow {
+  width:125px;
+  height:30px;
   position:absolute;
-  background-color: grey;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  right:-93%;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
 }
 
-.countries a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
+#savedshow:hover {
+  color:rgb(51,153,255);
 }
-
-.countries a:hover {
-    background-color: grey;
-}*/
-
-/*show downdown on hover*/
-/*.countryselect:hover .countries {
-    display:block;
-}
-
-.countryselect:hover .dropdown {
-  background-color: grey;
-}*/
 
 /*the map*/
 
 #map {
   height: 70vh;
-  width: 60vw;
-  top: 15%;
-  right: 22%;
+  width: 45vw;
+  top:16%;
+  left:4.5%;
   position: absolute;
   border-width: thick;
   border-style: solid;
@@ -249,42 +221,16 @@ body{
   box-shadow: 2px 2px 5px 5px #333333;
 }
 
-/*the three landmarks that show info */
+/*the landmark picture that shows info */
 
-#firstcountry {
+#countrypic {
   position: absolute;
-  height: 25%;
-  width:20%;
-  top: 15%;
-  right:0.5%;
+  height:60vh;
+  width:40vw;
+  top: 16%;
+  right:9%;
   border-style: solid;
   border-width: thick;
-  background-size: cover;
-  border-color: #666666;
-  box-shadow: 2px 2px 5px 5px #333333;
-}
-
-#secondcountry {
-  position: absolute;
-  height: 25%;
-  width: 20%;
-  top: 43%;
-  right:0.5%;
-  border-style: solid;
-  border-width: thick;
-  background-size: cover;
-  border-color: #666666;
-  box-shadow: 2px 2px 5px 5px #333333;
-}
-
-#thirdcountry {
-  position: absolute;
-  height: 25%;
-  width: 20%;
-  top: 71%;
-  right:0.5%;
-  border-width: thick;
-  border-style: solid;
   background-size: cover;
   border-color: #666666;
   box-shadow: 2px 2px 5px 5px #333333;
@@ -308,101 +254,83 @@ body{
   top: 5%;
   width: 50%;
   height: 10%;
-    left:35%;
+  left:35%;
 }
 
 .logins {
-    border-style: solid;
+  border-style: solid;
   border-width: medium;
-    height:5%;
+  height:5%;
 }
 
 #user {
-    position:absolute;
-    top:45%;
-    left:20%;
+  position:absolute;
+  top:45%;
+  left:20%;
 }
 
 #pass {
-    position:absolute;
-    top:45%;
-    left:55%;
+  position:absolute;
+  top:45%;
+  left:55%;
 }
 
 .loginbutton {
-    position: absolute;
-    top:80%;
-    left:40%;
-    width:15%;
-}
-
-.countryinfo {
-    left:78.5%;
-    top:10%;
-    position: absolute;
-    height: 24%;
-    width: 20%;
-    border-style: solid;
-    border-width: thick;
-    background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  top:80%;
+  left:40%;
+  width:15%;
 }
 
 
-
-#firstcountryinfo {
-    top: 15%;
-    height: 25%;
-    width:20%;
-    right:1%;
-    display: none;
-    background-color: rgba(0,0,0,0.7);
+#countryinfo {
+  bottom: -27%;
+  left: -0.8%;
+  position: absolute;
+  height: 24%;
+  width: 40vw;
+  border-style: solid;
+  border-width: thick;
+  border-color: #666666;
+  background-color: rgba(0,0,0,0.7);
+  box-shadow: 2px 2px 5px 5px #333333;
 }
 
-#secondcountryinfo {
-    top:43%;
-    height: 25%;
-    width:20%;
-    right:1%;
-    display: none;
-    background-color: rgba(0,0,0,0.7);
-}
-
-#thirdcountryinfo {
-    right: 22%;
-    top:71%;
-    height: 25%;
-    width:20%;
-    right:1%;
-    display: none;
-    background-color: rgba(0,0,0,0.7);
-}
 
 .save {
-    position: absolute;
-    bottom: 10%;
-    left: 42%;
-    display: block;
+  position: absolute;
+  bottom: 10%;
+  right: 2.5%;
+  display: block;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
+}
+
+.save:hover {
+  color:rgb(51,153,255);
 }
 
 .text {
-    position: absolute;
-    bottom:30%;
-    left: 23%;
-    display: block;
+  position: absolute;
+  bottom:30%;
+  left: 23%;
+  display: block;
 }
 
 #savedplaces {
   height: 50vh;
   width: 12vw;
-  top: 35%;
-  left: 2.5%;
+  top: -11%;
+  right: -1%;
   position: absolute;
   background-color: white;
   border-width: thick;
   border-style: solid;
   border-color: #666666;
   box-shadow: 2px 2px 5px 5px #333333;
-  background-color:rgba(255,255,255,0.8);
+  background-color:rgba(255,255,255,1);
+  display: none;
 }
 
 #savedemail {
@@ -413,25 +341,29 @@ body{
   left:5%;
 }
 
-#savedshow {
-  width:90%;
-  height:6%;
-  position:absolute;
-  top: 2%;
-  left:5%;
-  font-size: 13px;
-  color: black;
-}
-
 #displaysaved {
   width:90%;
   height:86.5%;
   position:absolute;
-  top:10%;
-  left:2.5%;
+  top:2%;
+  left:0%;
+  right:0%;
+  margin:auto;
   border-width: thick;
   border-style: solid;
   border-color: #666666;
+}
+
+#savedclose {
+  width:90%;
+  height:6%;
+  position:absolute;
+  bottom:3%;
+  left:5%;
+  font-size: 13px;
+  border-radis: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
 }
 
 .infotitle {
