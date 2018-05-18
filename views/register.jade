@@ -1,25 +1,32 @@
 extends layout
 
 block content
-	h2.page-header Register
-	p Please register using the form below
-	if errors
-		each error, i in errors
-			div.alert.alert-danger #{error.msg}
-	form(method='post', action='/users/register',enctype='multipart/form-data')
-		.form-group
-		label Name 
-		input.form-control(name='name', type='text',placeholder='Enter name')
-		.form-group
-		label Email 
-		input.form-control(name='email', type='email',placeholder='Enter Email')
-		.form-group
-		label Username 
-		input.form-control(name='username', type='text',placeholder='Enter User name')
-		.form-group
-		label Password
-		input.form-control(name='password', type='password',placeholder='Enter password')
-		.form-group
-		label Confirm Passwords
-		input.form-control(name='password2', type='password',placeholder='Confirm password')
-		input.btn.btn-primary(type='submit', name='submit',value='Register')
+	div#signpage
+		h2.page-header Register
+		p Please register using the form below
+		if errors
+			each error, i in errors
+				div.alert.alert-danger #{error.msg}
+		form(method='post', action='/users/register',enctype='multipart/form-data')
+			.form-group
+			label Name 
+			input.form-control(name='name', type='text',placeholder='Enter name')
+			.form-group
+			label Email 
+			input.form-control(name='email', type='email',placeholder='Enter Email')
+			.form-group
+			label Username 
+			input.form-control(name='username', type='text',placeholder='Enter User name')
+			.form-group
+			label Password
+			input.form-control(name='password', type='password',placeholder='Enter password')
+			.form-group
+			label Confirm Passwords
+			input.form-control(name='password2', type='password',placeholder='Confirm password')
+			p
+			input.btn.btn-primary(type='submit', name='submit',value='Register')
+	.main-text.hidden-xs
+		.col-md-12.text-left
+			h1(style="font-family: 'Lato';") Country Landmarks
+			p(style="font-family: 'Lato';")
+			| It wasn’t until recently that we actually realized just how much we love carrot cake.

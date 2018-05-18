@@ -32,8 +32,6 @@ app.set('view engine', 'jade');
 
 //handle file uploads
 
-
-
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

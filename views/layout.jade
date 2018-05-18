@@ -4,7 +4,9 @@ html(lang='en')
         title Welcome
         link(rel='stylesheet', href='/stylesheets/bootstrap.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
-    body
+        link(href="https://fonts.googleapis.com/css?family=Lato|Montserrat", rel="stylesheet")
+
+    body#overlay
         .navbar.navbar-default(role='navigation')
             .container
                 .navbar-header
@@ -27,6 +29,7 @@ html(lang='en')
                         if user
                             li
                                 a(href='/users/logout') Logout    
+        
         .container 
             != messages()
             block content

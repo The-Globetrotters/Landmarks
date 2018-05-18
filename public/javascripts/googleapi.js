@@ -293,32 +293,7 @@ document.getElementById("save1").addEventListener("click", function(){
   }
 });
 
-
-document.getElementById("save2").addEventListener("click", function(){
-  var entry = document.getElementById("title2").innerHTML;
-  var test = check(entry, favouritesList);
-  if (test > 0) {
-    alert('Location already in list!');
-  }
-  else {
-      favouritesList.push(entry);
-  }
-});
-
-document.getElementById("save3").addEventListener("click", function(){
-  var entry = document.getElementById("title3").innerHTML;
-  var test = check(entry, favouritesList);
-  if (test > 0) {
-    alert('Location already in list!');
-  }
-  else {
-      favouritesList.push(entry);
-      var data = {
-        landname: entry
-      };
-      $.post('/saveland', data);
-  }
-});
+// Start of the show saved locations function
 
 document.getElementById('savedshow').addEventListener("click", function(){
   document.getElementById('displaysaved').innerHTML =""
