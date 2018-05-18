@@ -1,8 +1,11 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+/*var db;
+*/
 
-mongoose.connect('mongodb://localhost/nodeauth');
+
 var db = mongoose.connection;
+
 
 //user schema 
 var UserSchema = mongoose.Schema({
@@ -18,6 +21,7 @@ var UserSchema = mongoose.Schema({
 	email: {
 		type: String 
 	},
+
 
 	name: {
 		type: String 
