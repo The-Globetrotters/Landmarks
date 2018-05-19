@@ -1,11 +1,9 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-
 require('dotenv').config();
 
 var db = mongoose.connection;
-
 
 mongoose.connect(process.env.MONGO_URI)
 	.then(connection => {
@@ -14,12 +12,6 @@ mongoose.connect(process.env.MONGO_URI)
 	.catch(error => {
 		console.log(error.message)
 	})
-
-/*{
-	host: process.env.DB_HOST,
-	username: process.env.DB_USER,
-	password: process.env.DB_PASSWORD
-})*/
 
 //user schema 
 var UserSchema = mongoose.Schema({

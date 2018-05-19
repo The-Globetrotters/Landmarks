@@ -96,6 +96,21 @@ font-size: 80px;
 
 a{
   text-decoration: none;
+
+}
+
+#logpage{
+  width: 35%;
+  background-color: white;
+  margin: auto;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom:15px;
+  padding-top: 2px;
+  border-radius: 25px;
+  position: absolute;
+  right: 8%;
+  top:30%;
 }
 
 #logpage{
@@ -171,40 +186,41 @@ body{
 .countryselect {
   position: absolute;
   display:inline-block;
-  left:4.5%;
-  top:10%;
+  left:6%;
+  top:15%;
 }
 
 /*country search input*/
 #countrysearch {
-  width:41vw;
+  width:21vw;
   height:30px;
   top:15%;
 }
 
 #searchbutton {
-  height:30px;
-  border-radius: 2px;
-  background-color:white;
-  transition-duration: 0.2s;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 
 #searchbutton:hover {
-  color:rgb(51,153,255);
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 
 #savedshow {
-  width:125px;
-  height:30px;
   position:absolute;
-  right:-93%;
-  border-radius: 2px;
-  background-color:white;
-  transition-duration: 0.2s;
+  right:-257%;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 
 #savedshow:hover {
-  color:rgb(51,153,255);
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 
 /*the map*/
@@ -212,12 +228,9 @@ body{
 #map {
   height: 70vh;
   width: 45vw;
-  top:16%;
-  left:4.5%;
+  top:21%;
+  left:6%;
   position: absolute;
-  border-width: thick;
-  border-style: solid;
-  border-color: #666666;
   box-shadow: 2px 2px 5px 5px #333333;
 }
 
@@ -227,12 +240,9 @@ body{
   position: absolute;
   height:60vh;
   width:40vw;
-  top: 16%;
-  right:9%;
-  border-style: solid;
-  border-width: thick;
+  top: 21%;
+  right:6%;
   background-size: cover;
-  border-color: #666666;
   box-shadow: 2px 2px 5px 5px #333333;
 }
 
@@ -289,9 +299,6 @@ body{
   position: absolute;
   height: 24%;
   width: 40vw;
-  border-style: solid;
-  border-width: thick;
-  border-color: #666666;
   background-color: rgba(0,0,0,0.7);
   box-shadow: 2px 2px 5px 5px #333333;
 }
@@ -300,15 +307,17 @@ body{
 .save {
   position: absolute;
   bottom: 10%;
-  right: 2.5%;
+  right: 2.3%;
   display: block;
-  border-radius: 2px;
-  background-color:white;
-  transition-duration: 0.2s;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
 }
 
 .save:hover {
-  color:rgb(51,153,255);
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 
 .text {
@@ -325,11 +334,7 @@ body{
   right: -1%;
   position: absolute;
   background-color: white;
-  border-width: thick;
-  border-style: solid;
-  border-color: #666666;
-  box-shadow: 2px 2px 5px 5px #333333;
-  background-color:rgba(255,255,255,1);
+  box-shadow: 0 0 3px 3px #333333;
   display: none;
 }
 
@@ -349,9 +354,13 @@ body{
   left:0%;
   right:0%;
   margin:auto;
-  border-width: thick;
-  border-style: solid;
   border-color: #666666;
+}
+
+#savedclose:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 
 #savedclose {
@@ -360,10 +369,15 @@ body{
   position:absolute;
   bottom:3%;
   left:5%;
-  font-size: 13px;
-  border-radis: 2px;
-  background-color:white;
-  transition-duration: 0.2s;
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+#savedclose:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
 }
 
 .infotitle {

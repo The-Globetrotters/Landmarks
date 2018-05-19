@@ -1,7 +1,7 @@
 const request = require('request');
 const yargs = require('yargs');
 
-const geocode = require('./gmaps');
+const geocode = require('./positiontest/gmaps');
 
 const argv = yargs
 	.options({
