@@ -5,16 +5,19 @@ block content
   body(style = 'background-image: url(https://misadventuresmag.com/wp-content/uploads/2014/02/badlands-south-unit-sunrise.jpg);background-size: cover')
     .countryselect
       input#countrysearch(type='text', placeholder='Enter a country or city')
-      input.btn#searchbutton(type='submit',name='submit',value='Search', onclick= "loadDoc()")
-      input.btn#savedshow(type='submit',name='submit',value='Show landmarks')
+      button#searchbutton(onclick='loadDoc()') Search
+      button#savedshow Show landmarks
     #map
     #countrypic
+    #countrypicoptions
+      button#forwardarrow ⇨
+      button#backwardarrow ⇦
       #countryinfo
         h2#title1.infotitle
-        input.btn.save(type='submit',name='submit',value='Save')
+        button#save1.save Save
       #savedplaces
         #displaysaved
-        input.btn#savedclose(type='submit',name='submit',value='Close')
+        button#savedclose Close
       script(src='/javascripts/FinalMainAppJavaScript.js')
       script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBGT9DtN2cOFyQW8CY5GD7cHYbeWsBoox8&callback=initMap')
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
