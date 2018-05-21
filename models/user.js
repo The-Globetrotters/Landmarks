@@ -15,11 +15,6 @@ mongoose.connect(process.env.MONGO_URI)
 		console.log(error.message)
 	})
 
-/*{
-	host: process.env.DB_HOST,
-	username: process.env.DB_USER,
-	password: process.env.DB_PASSWORD
-})*/
 
 //user schema 
 var UserSchema = mongoose.Schema({
