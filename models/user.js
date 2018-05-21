@@ -1,11 +1,9 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 
-
 require('dotenv').config();
 
 var db = mongoose.connection;
-
 
 mongoose.connect(process.env.MONGO_URI)
 	.then(connection => {
@@ -14,7 +12,6 @@ mongoose.connect(process.env.MONGO_URI)
 	.catch(error => {
 		console.log(error.message)
 	})
-
 
 //user schema 
 var UserSchema = mongoose.Schema({
@@ -79,5 +76,3 @@ module.exports.createUser = function(newUser, callback){
     	});
 	});
 }
-
-
