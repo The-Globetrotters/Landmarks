@@ -34,7 +34,7 @@ var itr=0;
  * @return {[none]} [Does not return anything]
  */
         function loadDoc(){ // Load up the API and place everything on the map properly
-            var newlocation = document.getElementById('countrysearch').value;
+            var newlocation = document.getElementById('SearchBar').value;
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function(){
                 if (this.readyState == 4 && this.status == 200) {
@@ -69,9 +69,7 @@ var itr=0;
                     photo: Results[i].photos[0].photo_reference
                 });
                 };
-                console.log(Results[0].photos[0].photo_reference)
-                return landmarks
-            }
+                return landmarks}
 
                 
             //Finding each Latitude and longitude of each location to use as markers

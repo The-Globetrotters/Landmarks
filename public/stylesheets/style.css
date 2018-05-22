@@ -51,7 +51,21 @@ form{
   background-size: cover;
 }
 
+/*.main-text {
+position: absolute;
+top: 30%;
+width: 42%;
+color:#ECE9E7;
+font-weight: bold;
+font-size: 28px;
+}
 
+.main-text h1 {
+font-family: 'Montserrat', sans-serif;
+color: #ECE9E7;
+font-size: 80px;
+}
+*/
 /*         overlay styles */
 /*h1 {
     font-family: 'Lato', sans-serif;
@@ -60,24 +74,6 @@ form{
     font-size: 49px;
 }*/
 
-#overlay{
-  height: 100vh;
-}
-.main-text {
-position: absolute;
-top: 30%;
-width: 42%;
-color:#ECE9E7;
-font-weight: bold;
-font-size: 28px;
-left: 8%;
-}
-
-.main-text h1 {
-font-family: 'Montserrat', sans-serif;
-color: #ECE9E7;
-font-size: 80px;
-}
 .carousel-item{
    -webkit-filter: brightness(29%);
     filter:brightness(29%);
@@ -95,6 +91,7 @@ font-size: 80px;
 
 a{
   text-decoration: none;
+
 }
 
 #logpage{
@@ -109,22 +106,8 @@ a{
   position: absolute;
   right: 8%;
   top:30%;
-
 }
 
-#signpage{
-  width: 35%;
-  background-color: white;
-  margin: auto;
-  padding-left:20px;
-  padding-right:20px;
-  padding-bottom:15px;
-  padding-top: 2px;
-  border-radius: 25px;
-  position: absolute;
-  right: 8%;
-  top: 10%;
-}
 
 body{
 /*  //background-image: url('https://hips.hearstapps.com/edc.h-cdn.co/assets/16/25/american-landmarks-mount-rushmore_1.jpg');
@@ -170,8 +153,8 @@ body{
 .countryselect {
   position: absolute;
   display:inline-block;
-  left:4.5%;
-  top:10%;
+  left:6%;
+  top:15%;
 }
 
 /*country search input*/
@@ -390,6 +373,18 @@ body{
   left:5%;
   font-size: 13px;
   border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
+}
+
+#savedclose {
+  width:90%;
+  height:6%;
+  position:absolute;
+  bottom:3%;
+  left:5%;
+  font-size: 13px;
+  border-radis: 2px;
   background-color:white;
   transition-duration: 0.2s;
 }
