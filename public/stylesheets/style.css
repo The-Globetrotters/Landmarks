@@ -1,35 +1,32 @@
 #message{
   transition: opacity 3s;
 }
-
-
 ul.success li{
-	padding: 15px;
-	margin-bottom: 20px;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	color: #3c763d;
-	background-color: #dff0d8;
-	border-color: #d6e9c6;
-	list-style: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  list-style: none;
 }
 
 ul.error li{
-	padding: 15px;
-	margin-bottom: 20px;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	color: #a94442;
-	background-color: #f2dede;
-	border-color: #ebccd1;
-	list-style: none;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  list-style: none;
 
 }
 
 form{
-	background-color: white;
-	padding: 10px;
-	width: 40%;
+  background-color: white;
+  padding: 10px;
 }
 
 
@@ -116,8 +113,11 @@ a{
 
 
 body{
-	background-image: url('https://hips.hearstapps.com/edc.h-cdn.co/assets/16/25/american-landmarks-mount-rushmore_1.jpg');
-	background-repeat: no-repeat;
+/*  //background-image: url('https://hips.hearstapps.com/edc.h-cdn.co/assets/16/25/american-landmarks-mount-rushmore_1.jpg');
+*/  
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://hips.hearstapps.com/edc.h-cdn.co/assets/16/25/american-landmarks-mount-rushmore_1.jpg');
+
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -156,43 +156,40 @@ body{
 .countryselect {
   position: absolute;
   display:inline-block;
-
   left:6%;
   top:15%;
-
 }
 
 /*country search input*/
 #countrysearch {
-  width:21vw;
+  width:41vw;
   height:30px;
   top:15%;
 }
 
 #searchbutton {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  height:30px;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
 }
 
 #searchbutton:hover {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  color:rgb(51,153,255);
 }
 
 #savedshow {
+  width:125px;
+  height:30px;
   position:absolute;
-  right:-257%;
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  right:-93%;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
 }
 
 #savedshow:hover {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  color:rgb(51,153,255);
 }
 
 /*the map*/
@@ -200,8 +197,8 @@ body{
 #map {
   height: 70vh;
   width: 45vw;
-  top:21%;
-  left:6%;
+  top:16%;
+  left:4.5%;
   position: absolute;
   box-shadow: 2px 2px 5px 5px #333333;
 }
@@ -212,10 +209,45 @@ body{
   position: absolute;
   height:60vh;
   width:40vw;
-  top: 21%;
-  right:6%;
+  top: 16%;
+  right:9%;
+  border-style: solid;
+  border-width: thick;
   background-size: cover;
+  border-color: #666666;
   box-shadow: 2px 2px 5px 5px #333333;
+}
+
+#countrypicoptions {
+  position: absolute;
+  height:60vh;
+  width:40vw;
+  top: 16%;
+  right:9%;
+  border-style: solid;
+  border-width: thick;
+  background-size: cover;
+  display: block;
+}
+
+#forwardarrow{
+  position: absolute;
+  right:0px;
+  top:155px;
+  height: 45px;
+  width: 45px;
+  background-color:rgba(240, 236, 236, 0.7);
+  display: inline-block;
+}
+
+#backwardarrow{
+  position: absolute;
+  top:155px;
+  left: 0px;
+  height: 45px;
+  width: 45px;
+  background-color:rgba(245, 236, 236, 0.7);
+  display: block;
 }
 
 /*this is for the login page*/
@@ -271,6 +303,9 @@ body{
   position: absolute;
   height: 24%;
   width: 40vw;
+  border-style: solid;
+  border-width: thick;
+  border-color: #666666;
   background-color: rgba(0,0,0,0.7);
   box-shadow: 2px 2px 5px 5px #333333;
 }
@@ -279,17 +314,15 @@ body{
 .save {
   position: absolute;
   bottom: 10%;
-  right: 2.3%;
+  right: 2.5%;
   display: block;
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
 }
 
 .save:hover {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  color:rgb(51,153,255);
 }
 
 .text {
@@ -306,7 +339,11 @@ body{
   right: -1%;
   position: absolute;
   background-color: white;
-  box-shadow: 0 0 3px 3px #333333;
+  border-width: thick;
+  border-style: solid;
+  border-color: #666666;
+  box-shadow: 2px 2px 5px 5px #333333;
+  background-color:rgba(255,255,255,1);
   display: none;
 }
 
@@ -320,29 +357,27 @@ body{
 
 #displaysaved {
   width:90%;
-  height:86.5%;
+  height:6%;
   position:absolute;
   top:2%;
   left:0%;
   right:0%;
   margin:auto;
+  border-width: thick;
+  border-style: solid;
   border-color: #666666;
 }
 
 #savedclose {
   width:90%;
+  height:6%;
   position:absolute;
   bottom:3%;
   left:5%;
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
-}
-
-#savedclose:hover {
-  color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  font-size: 13px;
+  border-radius: 2px;
+  background-color:white;
+  transition-duration: 0.2s;
 }
 
 #savedclose {

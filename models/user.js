@@ -1,10 +1,17 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
+require('dotenv').config();
 
-mongoose.connect('mongodb://localhost/nodeauth');
 var db = mongoose.connection;
 
-//user schema 
+mongoose.connect(process.env.MONGO_URI)
+	.then(connection => {
+		console.log('Connected to database')
+	})
+	.catch(error => {
+		console.log(error.message)
+	})
+
 var UserSchema = mongoose.Schema({
 	username: {
 		type: String,

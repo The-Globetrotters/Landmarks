@@ -66,7 +66,7 @@ var jsonobject = {"results": {
       ]
     }}
 
-describe('gmaps tests', () => {
+describe.skip('gmaps tests', () => {
   test('Get Landmarks does not compute numbers', () => {
     expect(gmaps.getLandmarks(jsonobject, (errorMessage, results) => {
     	if (errorMessage){
