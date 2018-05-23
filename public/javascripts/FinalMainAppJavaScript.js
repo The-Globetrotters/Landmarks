@@ -237,6 +237,25 @@ function ScrollPicsBackward(){
     }
 }
 
+var favouritesList = [];
+//saves landmarks to list
+function SaveLandmarks(){
+    var entry = document.getElementById('title1').innerHTML;
+    console.log("you pressed ", entry);
+    var test = check(entry, favouritesList);
+    if (test > 0){
+        alert('Landmark already in list');
+    }
+    else{
+        favouritesList.push(entry);
+        var data = {
+            landname: entry
+        };
+        $.post('/saveland', data);
+        
+    }
+};
+
 
 module.exports = {
   initMap,
