@@ -50,8 +50,7 @@ form{
   padding:40px;
   background-size: cover;
 }
- 
- 
+
 /*         overlay styles */
 /*h1 {
     font-family: 'Lato', sans-serif;
@@ -59,7 +58,7 @@ form{
     margin-bottom: 0;
     font-size: 49px;
 }*/
- 
+
 #overlay{
   height: 100vh;
 }
@@ -125,7 +124,7 @@ a{
   right: 8%;
   top: 10%;
 }
- 
+
 body{
 /*  //background-image: url('https://hips.hearstapps.com/edc.h-cdn.co/assets/16/25/american-landmarks-mount-rushmore_1.jpg');
 */  
@@ -171,7 +170,7 @@ body{
   position: absolute;
   display:inline-block;
   left:4.5%;
-  top:10%;
+  top:15%;
 }
  
 /*country search input*/
@@ -381,7 +380,7 @@ body{
   border-style: solid;
   border-color: #666666;
 }
- 
+
 #savedclose {
   width:90%;
   height:6%;
@@ -393,7 +392,7 @@ body{
   background-color:white;
   transition-duration: 0.2s;
 }
- 
+
 .infotitle {
   color: white;
   position:absolute;
