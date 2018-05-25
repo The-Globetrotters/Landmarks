@@ -273,7 +273,7 @@ function closeLandmarks(){
     document.getElementById('savedplaces').style.display ='none'
 }
 
-/*module.exports = {
+module.exports = {
   initMap,
   addInfoWindow,
   loadDoc,
@@ -285,8 +285,9 @@ function closeLandmarks(){
   ScrollPicsForward,
   ScrollPicsBackward,
   check,
-  SaveLandmarks
-}*/
+  SaveLandmarks,
+  LoadLandmarks
+}
 // document.getElementById('searchbutton').addEventListener('click', function() {
 //    loadDoc();
 // });
