@@ -6,7 +6,7 @@ block content
     .countryselect
       input#countrysearch(type='text', placeholder='Enter a country or city')
       button#searchbutton(onclick='loadDoc()') Search
-      button#savedshow Show landmarks
+      button#savedshow(onclick='LoadLandmarks()') Show landmarks
     #map
     #countrypic
     #countrypicoptions
@@ -18,7 +18,7 @@ block content
       #savedplaces
         #displaysaved
         input.btn#savedclose(type='submit',name='submit',value='Close', onclick='closeLandmarks()')
-        
+
       script(src='/javascripts/FinalMainAppJavaScript.js')
       script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBWUn1Lc706TRf_lB71AYa3O9IfTEO5Dsk&callback=initMap')
       script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
