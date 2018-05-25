@@ -266,7 +266,7 @@ function LoadLandmarks() {
     });
 }
 
-/*module.exports = {
+module.exports = {
   initMap,
   addInfoWindow,
   loadDoc,
@@ -279,7 +279,7 @@ function LoadLandmarks() {
   ScrollPicsBackward,
   check,
   SaveLandmarks
-}*/
+}
 // document.getElementById('searchbutton').addEventListener('click', function() {
 //    loadDoc();
 // });
