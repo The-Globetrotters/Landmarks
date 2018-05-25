@@ -257,13 +257,20 @@ function SaveLandmarks() {
 
 function LoadLandmarks() {
     $.post('/showland', function(data){
+        var displaysaved = document.getElementById('displaysaved');
+        var places = document.getElementById('savedplaces');
         favlistString = ''
         console.log(data);
         for (i=0; i < data.length; i++){
             favlistString += '<p>'+data[i]+'</p>'
         }
-        document.getElementById('title1').innerHTML = favlistString;
+        displaysaved.innerHTML = favlistString;
+        places.style.display = 'block';
     });
+}
+
+function closeLandmarks(){
+    document.getElementById('savedplaces').style.display ='none'
 }
 
 module.exports = {
