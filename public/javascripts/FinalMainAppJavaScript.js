@@ -278,7 +278,8 @@ module.exports = {
   ScrollPicsForward,
   ScrollPicsBackward,
   check,
-  SaveLandmarks
+  SaveLandmarks,
+  LoadLandmarks
 }
 // document.getElementById('searchbutton').addEventListener('click', function() {
 //    loadDoc();
